@@ -1,3 +1,7 @@
+
+<img width="871" alt="Screenshot 2024-03-08 at 7 40 58 PM" src="https://github.com/khaledm356/ListingCountries/assets/25192338/7eda7995-004b-4008-94ce-77c212d7f8f2">
+<img width="666" alt="Screenshot 2024-03-08 at 7 57 40 PM" src="https://github.com/khaledm356/ListingCountries/assets/25192338/f0a379a8-b2aa-4ce1-bae9-d10f1977d5f3">
+
 # Countries App
 
 The Countries component is a React component that fetches and displays a list of countries from an API. It allows users to search for a specific country by name.
