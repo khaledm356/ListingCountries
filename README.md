@@ -1,46 +1,149 @@
-# Getting Started with Create React App
+# Countries App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The Countries component is a React component that fetches and displays a list of countries from an API. It allows users to search for a specific country by name.
 
-## Available Scripts
+## List Component
 
-In the project directory, you can run:
+The `List` component is a reusable React component used to render a list of items. Each item in the list is represented by a label and an ID.
 
-### `npm start`
+### Usage
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Props
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- **list**: An array of objects representing the items to be rendered in the list. Each object should have a `label` property for the item's display text and an `id` property for the item's unique identifier.
 
-### `npm test`
+### Example
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```jsx
+import React from 'react';
+import { List } from './List';
 
-### `npm run build`
+const MyComponent = () => {
+  const items = [
+    { label: 'Item 1', id: '1' },
+    { label: 'Item 2', id: '2' },
+    { label: 'Item 3', id: '3' }
+  ];
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+  return (
+    <List list={items} />
+  );
+};
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+In this example, the `List` component is used to render a list of items defined in the `items` array.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Props
 
-### `npm run eject`
+### list
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- **Type**: Array
+- **Description**: An array of objects representing the items to be rendered in the list.
+- **Properties**:
+  - **label**: The display text for the item.
+  - **id**: The unique identifier for the item.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Here's a README for the `Input` component:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
 
-## Learn More
+## Input Component
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+The `Input` component is a reusable React component used to render an input field.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Usage
+
+### Props
+
+- **value**: The current value of the input field.
+- **placeholder**: The placeholder text to display when the input field is empty.
+- **onChange**: A function to call when the value of the input field changes.
+
+### Example
+
+```jsx
+import React, { useState } from 'react';
+import { Input } from './Input';
+
+const MyComponent = () => {
+  const [searchText, setSearchText] = useState('');
+
+  const handleInputChange: ChangeEventHandler<HTMLInputElement> = (event) => {
+    setSearchText(event.target.value);
+  };
+
+  return (
+    <Input value={searchText} placeholder="Enter search text" onChange={handleInputChange} />
+  );
+};
+```
+
+In this example, the `Input` component is used to render an input field for searching.
+
+## Props
+
+### value
+
+- **Type**: String
+- **Description**: The current value of the input field.
+
+### placeholder
+
+- **Type**: String
+- **Description**: The placeholder text to display when the input field is empty.
+
+### onChange
+
+- **Type**: Function
+- **Description**: A function to call when the value of the input field changes. It receives an event object as a parameter.
+
+---
+
+You can copy this content into a new `README.md` file in the same directory as your `Input` component. Adjust the paths and filenames as necessary.
+
+## Getting Started
+
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+Make sure you have Node.js and npm installed on your machine.
+
+### Installation
+
+1. Clone the repository to your local machine:
+
+git clone https://github.com/yourusername/countries-app.git
+
+
+2. Navigate into the project directory:
+
+cd countries-app
+
+
+3. Install dependencies:
+
+
+### Running the Application
+
+To start the development server and run the application:
+
+The application should now be running at `http://localhost:3000`.
+
+## Usage
+
+- Enter a country name in the input field to search for countries.
+- The list will update dynamically as you type.
+- Click on a country name to view more details.
+
+## Built With
+
+- [React](https://reactjs.org/) - JavaScript library for building user interfaces
+- [axios](https://axios-http.com/) - Promise based HTTP client for the browser and node.js
+
+## Author
+
+- [Khaled Zaher](https://github.com/khaledm356)
+
