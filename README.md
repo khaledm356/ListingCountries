@@ -45,10 +45,6 @@ In this example, the `List` component is used to render a list of items defined 
 
 ---
 
-Here's a README for the `Input` component:
-
----
-
 ## Input Component
 
 The `Input` component is a reusable React component used to render an input field.
@@ -100,8 +96,6 @@ In this example, the `Input` component is used to render an input field for sear
 - **Description**: A function to call when the value of the input field changes. It receives an event object as a parameter.
 
 ---
-
-You can copy this content into a new `README.md` file in the same directory as your `Input` component. Adjust the paths and filenames as necessary.
 
 ## Getting Started
 
